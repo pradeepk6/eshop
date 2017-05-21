@@ -1,9 +1,9 @@
 ##### About:
 Code sample of Test Automation using:
-Java 1.8 
-Selenium WebDriver 3.4.0
-Cucumber 1.2.5
-maven 3.3.9
+* Java 1.8
+* Selenium WebDriver 3.4.0
+* Cucumber 1.2.5
+* Maven 3.3.9
 
 ##### tested on:
 * maven based project developed using IntelliJ
@@ -26,8 +26,4 @@ webdriver.<browserName>.driver.See the plugin in the
 pom file and Repositorymap.xml to see what drivers and versions specified.
 If the plugin fails to download at all or the specified binary then
 driver binaries have to be downloaded manually and the 'system property'
-has to be passed in via maven.  For eg: 
-mvn verify -Dbrowser="chrome" -Dwebdriver.chrome.driver="file location of standalone driver exe file"
-
-
-
+has to be passed in via maven.For eg:  mvn verify -Dbrowser="chrome" -Dwebdriver.chrome.driver="file location of standalone driver exe file"
