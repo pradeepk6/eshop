@@ -16,7 +16,7 @@ Code sample of Test Automation using:
 ##### how to run:
 * mvn verify
 * The above command tests with the default browser choice : chrome<br>system-property 'browser' can be changed in the pom file
-  or passed via maven.<br>for eg:  mvn verify -Dbrowser="firefox"
+  or passed via maven command line.<br>for eg:  mvn verify -Dbrowser="firefox"
 
 ##### driver binaries download plugin:
 The project uses a plugin 'driver-binary-downloader-maven-plugin'
@@ -26,4 +26,4 @@ webdriver.<browserName>.driver.See the plugin in the
 pom file and Repositorymap.xml to see what drivers and versions specified.
 If the plugin fails to download at all or the specified binary then
 driver binaries have to be downloaded manually and the 'system property'
-has to be passed in via maven.<br>For eg:  mvn verify -Dbrowser="chrome" -Dwebdriver.chrome.driver="file location of standalone driver exe file"
+has to be passed in via maven command line.<br>For eg:  mvn verify -Dbrowser="chrome" -Dwebdriver.chrome.driver="file location of standalone driver exe file"
