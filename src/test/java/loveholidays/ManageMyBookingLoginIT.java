@@ -21,18 +21,18 @@ public class ManageMyBookingLoginIT extends WebDriverBase {
     }
 
     @Test
-    public void testInvalidFormatOfRefNumber() throws Exception {
-        String invalidMessage = "Your booking reference starts with LVE or LOV and" +
+    public void refNumberWithInvalidFormat() throws Exception {
+        String errMessage = "Your booking reference starts with LVE or LOV and" +
                 " can be found on your booking summary. If you haven’t received your" +
                 " booking summary yet, you’ll be unable to login to Manage My Booking";
         driver.get(mmbUrl);
         mmbPage.bookingRefNum.sendKeys("6783467");
         mmbPage.loginFormSubmit_but.click();
-        assertTrue(mmbPage.bookingRefNum.getAttribute("validationMessage").contains(invalidMessage));
+        assertTrue(mmbPage.bookingRefNum.getAttribute("validationMessage").contains(errMessage));
     }
 
     @Test
-    public void testInvalidRefNumber() throws Exception {
+    public void invalidRefNumber() throws Exception {
         String errMessage = "Sorry this is not a valid booking reference." +
                 " If you have booked within the last 24 hours please wait" +
                 " until you receive your LOV or LVE reference number by email before logging in.";

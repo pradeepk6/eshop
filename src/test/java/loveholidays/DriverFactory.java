@@ -5,6 +5,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.htmlunit.HtmlUnitDriver;
+import org.openqa.selenium.phantomjs.PhantomJSDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
 /**
@@ -29,6 +31,15 @@ public class DriverFactory {
             case "EDGE":
                 capabilities = DesiredCapabilities.edge();
                 driver = new EdgeDriver(capabilities);
+                break;
+            case "PHANTOMJS":
+                capabilities = DesiredCapabilities.phantomjs();
+                driver = new PhantomJSDriver(capabilities);
+                break;
+            case "HTMLUNIT":
+                capabilities = DesiredCapabilities.htmlUnit();
+                driver = new HtmlUnitDriver(capabilities);
+                break;
         }
         return driver;
     }
