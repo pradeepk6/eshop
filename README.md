@@ -15,7 +15,7 @@ Code sample of Test Automation using:
 
 ##### how to run:
 * mvn verify
-* The above command tests with the default browser choice : chrome  system-property 'browser' can be changed in the pom file
+* The above command tests with the default browser choice : chrome<br>system-property 'browser' can be changed in the pom file
   or passed via maven.<br>for eg:  mvn verify -Dbrowser="firefox"
 
 ##### driver binaries download plugin:
