@@ -1,20 +1,22 @@
 package loveholidays;
 
+import cucumber.api.java.Before;
 import org.junit.After;
 import org.junit.AfterClass;
-import org.junit.Before;
 import org.openqa.selenium.WebDriver;
+
+//import org.junit.Before;
 
 
 /**
- * Created by user on 08/05/2017.
+ * Created by user
  */
 public class WebDriverBase {
 
     protected static WebDriver driver;
 
     public WebDriverBase() {
-        driver = DriverFactory.getDriver();
+        //driver = DriverFactory.getDriver();
     }
 
     @AfterClass
@@ -23,6 +25,7 @@ public class WebDriverBase {
 
     @Before
     public void setUp() throws Exception {
+
     }
 
     @After

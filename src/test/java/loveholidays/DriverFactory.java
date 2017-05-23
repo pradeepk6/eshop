@@ -10,7 +10,7 @@ import org.openqa.selenium.phantomjs.PhantomJSDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
 /**
- * Created by user on 9/05/2017.
+ * Created by user
  */
 public class DriverFactory {
     private static String browser;

@@ -7,9 +7,9 @@ import org.junit.Test;
 import static org.junit.Assert.assertTrue;
 
 /**
- * Created by user on 08/05/2017.
+ * Created by user
  */
-public class ManageMyBookingLoginIT extends WebDriverBase {
+public class ManageMyBookingLogin extends WebDriverBase {
 
     private ManageMyBookingPage mmbPage;
     private String mmbUrl = "https://www.loveholidays.com/manage/login.html";

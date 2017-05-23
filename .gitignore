@@ -45,4 +45,5 @@
 
 # browser binary downloads #
 ############################
-**/drivers/
+/src/test/drivers/browser_binaries/
+/src/test/drivers/browser_zips/
