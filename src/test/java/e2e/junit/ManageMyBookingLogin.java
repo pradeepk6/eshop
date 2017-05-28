@@ -1,6 +1,6 @@
-package loveholidays;
+package e2e.junit;
 
-import loveholidays.pages.ManageMyBookingPage;
+import e2e.pageobjects.ManageMyBookingPage;
 import org.junit.Before;
 import org.junit.Test;
 

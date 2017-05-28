@@ -1,11 +1,10 @@
-package loveholidays;
+package e2e.junit;
 
-import cucumber.api.java.Before;
 import org.junit.After;
 import org.junit.AfterClass;
-import org.openqa.selenium.WebDriver;
-
-//import org.junit.Before;
+import org.junit.Before;
+import org.openqa.selenium.support.events.EventFiringWebDriver;
+import org.springframework.beans.factory.annotation.Autowired;
 
 
 /**
@@ -13,10 +12,10 @@ import org.openqa.selenium.WebDriver;
  */
 public class WebDriverBase {
 
-    protected static WebDriver driver;
+    @Autowired
+    protected static EventFiringWebDriver driver;
 
     public WebDriverBase() {
-        //driver = DriverFactory.getDriver();
     }
 
     @AfterClass

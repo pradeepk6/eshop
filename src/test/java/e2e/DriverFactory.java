@@ -1,4 +1,4 @@
-package loveholidays;
+package e2e;
 
 import org.openqa.selenium.Capabilities;
 import org.openqa.selenium.WebDriver;
@@ -8,15 +8,20 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.htmlunit.HtmlUnitDriver;
 import org.openqa.selenium.phantomjs.PhantomJSDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.support.events.EventFiringWebDriver;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
 
 /**
  * Created by user
  */
+@Configuration
 public class DriverFactory {
     private static String browser;
     private static WebDriver driver;
 
-    public static WebDriver getDriver() {
+    @Bean
+    public static EventFiringWebDriver eventFiringWebDriver() {
         Capabilities capabilities;
         if (browser == null) browser = getBrowser();
         switch (browser) {
@@ -41,7 +46,7 @@ public class DriverFactory {
                 driver = new HtmlUnitDriver(capabilities);
                 break;
         }
-        return driver;
+        return new EventFiringWebDriver(driver);
     }
 
     public static String getBrowser() {

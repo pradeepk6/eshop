@@ -1,7 +1,7 @@
-package loveholidays.pages;
+package e2e.pageobjects;
 
 /**
- * Created by user on 08/05/2017.
+ * Created by user
  */
 
 import org.openqa.selenium.WebDriver;
@@ -13,6 +13,7 @@ import org.openqa.selenium.support.pagefactory.AjaxElementLocatorFactory;
  * Abstract class representation of a Page in the UI. Page object pattern
  */
 public abstract class Page {
+
 
     protected WebDriver driver;
 

@@ -7,7 +7,7 @@
                     <filelocation>
                         https://download.microsoft.com/download/3/2/D/32D3E464-F2EF-490F-841B-05D53C848D15/MicrosoftWebDriver.exe
                     </filelocation>
-                    <hash>6f9e81e5f60fa3e8dccba15a3715ba20d44d0775</hash>
+                    <hash></hash>
                     <hashtype>sha1</hashtype>
                 </bitrate>
             </version>
@@ -16,7 +16,7 @@
             <version id="2.29">
                 <bitrate thirtytwobit="true" sixtyfourbit="true">
                     <filelocation>https://chromedriver.storage.googleapis.com/2.29/chromedriver_win32.zip</filelocation>
-                    <hash>2f02f28d3ff1b8f2a63cb3bc32c26ade60ac4737</hash>
+                    <hash></hash>
                     <hashtype>sha1</hashtype>
                 </bitrate>
             </version>
@@ -34,7 +34,7 @@
                     <filelocation>
                         https://github.com/mozilla/geckodriver/releases/download/v0.16.1/geckodriver-v0.16.1-win32.zip
                     </filelocation>
-                    <hash>f49aa6de084ce82b546868992b646e57e3bf3de8</hash>
+                    <hash></hash>
                     <hashtype>sha1</hashtype>
                 </bitrate>
             </version>
@@ -44,7 +44,7 @@
                 <bitrate thirtytwobit="true" sixtyfourbit="true">
                     <filelocation>https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-2.1.1-windows.zip
                     </filelocation>
-                    <hash>eb61e6dc49832a3d60f708a92fa7299c57cad7db</hash>
+                    <hash></hash>
                     <hashtype>sha1</hashtype>
                 </bitrate>
             </version>
@@ -121,7 +121,7 @@
                 <bitrate thirtytwobit="true" sixtyfourbit="true">
                     <filelocation>https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-2.1.1-macosx.zip
                     </filelocation>
-                    <hash>c6e1a16bb9e89ce1e392a4768e99177797c93350</hash>
+                    <hash></hash>
                     <hashtype>sha1</hashtype>
                 </bitrate>
             </version>

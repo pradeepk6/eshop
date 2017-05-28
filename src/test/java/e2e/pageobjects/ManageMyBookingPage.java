@@ -1,12 +1,12 @@
-package loveholidays.pages;
+package e2e.pageobjects;
 
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
+import org.openqa.selenium.support.events.EventFiringWebDriver;
 
 /**
- * Created by user on 08/05/2017.
+ * Created by user
  */
 public class ManageMyBookingPage extends Page {
 
@@ -23,7 +23,7 @@ public class ManageMyBookingPage extends Page {
     public WebElement errMsg1;
 
 
-    public ManageMyBookingPage(WebDriver driver) {
+    public ManageMyBookingPage(EventFiringWebDriver driver) {
         super(driver);
     }
 }

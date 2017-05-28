@@ -1,8 +1,9 @@
 ##### About:
-Code sample of Test Automation using:
+Code sample of web test-automation with Cucumber using:
 * Java 1.8
 * Selenium WebDriver 3.4.0
 * Cucumber 1.2.5
+* Spring 4.3.8
 * Maven 3.3.9
 
 ##### tested on:

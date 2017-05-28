@@ -1,23 +1,25 @@
-package loveholidays.stepdefs;
+package e2e.cucumber;
 
-import cucumber.api.java.After;
 import cucumber.api.java.Before;
 import cucumber.api.java8.En;
-import loveholidays.DriverFactory;
-import loveholidays.pages.ManageMyBookingPage;
-import org.openqa.selenium.WebDriver;
+import e2e.pageobjects.ManageMyBookingPage;
+import org.openqa.selenium.support.events.EventFiringWebDriver;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import static org.junit.Assert.assertTrue;
 
 /**
  * Created by user
  */
-public class ManageMyBookingLoginStepdefs implements En {
-    WebDriver driver;
+public class ManageMyBookingLoginSteps implements En {
+
+    @Autowired
+    EventFiringWebDriver driver;
+
     private ManageMyBookingPage mmbPage;
     private String mmbUrl = "https://www.loveholidays.com/manage/login.html";
 
-    public ManageMyBookingLoginStepdefs() {
+    public ManageMyBookingLoginSteps() {
 
         Given("^User on Manage My Booking page$", () -> {
             driver.get(mmbUrl);
@@ -46,14 +48,7 @@ public class ManageMyBookingLoginStepdefs implements En {
 
     @Before
     public void initPageObjects() {
-        driver = DriverFactory.getDriver();
+        //page init must happen after driver init
         mmbPage = new ManageMyBookingPage(driver);
-        driver.manage().window().maximize();
     }
-
-    @After
-    public void quitDriverObject() {
-        driver.quit();
-    }
-
 }
