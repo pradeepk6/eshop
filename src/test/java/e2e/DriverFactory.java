@@ -11,6 +11,7 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Scope;
 
 /**
  * Created by user
@@ -21,6 +22,7 @@ public class DriverFactory {
     private static WebDriver driver;
 
     @Bean
+    @Scope("cucumber-glue")
     public static EventFiringWebDriver eventFiringWebDriver() {
         Capabilities capabilities;
         if (browser == null) browser = getBrowser();

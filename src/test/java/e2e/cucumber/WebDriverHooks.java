@@ -25,14 +25,11 @@ public class WebDriverHooks {
             scenario.embed(screenshot, "image/png");
         } catch (WebDriverException somePlatformsDontSupportScreenshots) {
             System.err.println(somePlatformsDontSupportScreenshots.getMessage());
-        } finally {
-            // driver.close();
         }
     }
 
     @After
-    public void quitDriverObject() {
-        //driver.quit();
+    public void teardown() {
     }
 
 }

@@ -25,16 +25,15 @@ public class ManageMyBookingLoginSteps implements En {
             driver.get(mmbUrl);
         });
 
-        When("^User enters (\\w+)$", (String bookingRefNum) -> {
+        When("^User enters (\\w+) for booking reference$", (String bookingRefNum) -> {
             mmbPage.bookingRefNum.sendKeys(bookingRefNum);
         });
 
         And("^clicks Submit button$", () -> {
             mmbPage.loginFormSubmit_but.click();
         });
-
-        And("^clicks Submit button to submit$", () -> {
-            mmbPage.loginFormSubmit_but.submit();
+        And("^enters (\\w+) for Lead Passenger Surname$", (String surName) -> {
+            mmbPage.leadPassengerSurname.sendKeys(surName);
         });
 
         Then("^the error message should be shown:$", (String errMessage) -> {
