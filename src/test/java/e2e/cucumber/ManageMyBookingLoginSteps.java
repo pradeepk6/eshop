@@ -17,24 +17,25 @@ public class ManageMyBookingLoginSteps implements En {
     EventFiringWebDriver driver;
 
     private ManageMyBookingPage mmbPage;
-    private String mmbUrl = "https://www.loveholidays.com/manage/login.html";
 
     public ManageMyBookingLoginSteps() {
 
         Given("^User on Manage My Booking page$", () -> {
-            driver.get(mmbUrl);
+            mmbPage.visitPage();
         });
 
-        When("^User enters (\\w+) for booking reference$", (String bookingRefNum) -> {
-            mmbPage.bookingRefNum.sendKeys(bookingRefNum);
+        When("^he logs in by filling in ONLY bookingRef with \"(\\w+)\"$",
+                (String bookingRefNum) -> {
+                    mmbPage.fill_bookingRefNum(bookingRefNum);
+                    mmbPage.submitLoginForm();
+        });
+        When("^he logs in by filling in ONLY bookingRef and leadPassengerSurname with \"(\\w+)\" and \"(\\w+)\"$",
+                (String bookingRef, String leadPassengerSurname) -> {
+                    mmbPage.fill_bookingRefNum(bookingRef);
+                    mmbPage.fill_leadPassengerSurname(leadPassengerSurname);
+                    mmbPage.submitLoginForm();
         });
 
-        And("^clicks Submit button$", () -> {
-            mmbPage.loginFormSubmit_but.click();
-        });
-        And("^enters (\\w+) for Lead Passenger Surname$", (String surName) -> {
-            mmbPage.leadPassengerSurname.sendKeys(surName);
-        });
 
         Then("^the error message should be shown:$", (String errMessage) -> {
             assertTrue(mmbPage.bookingRefNum.getAttribute("validationMessage").contains(errMessage));

@@ -12,6 +12,7 @@ import org.junit.runner.RunWith;
         tags = {"~@ignore"},
         features = "src/test/resources/features",
         format = {"pretty", "html:target/cucumber"},
+        monochrome = true,
         glue = "e2e.cucumber")
 public class RunCukesIT {
 }

@@ -22,8 +22,34 @@ public class ManageMyBookingPage extends Page {
     @FindBy(how = How.CSS, using = "#getBooking > label.mmb-login__form__field > .error")
     public WebElement errMsg1;
 
+    private String url = "https://www.loveholidays.com/manage/login.html";
+
 
     public ManageMyBookingPage(EventFiringWebDriver driver) {
         super(driver);
     }
+
+//    public static ManageMyBookingPage visitPage(EventFiringWebDriver driver) {
+//        ManageMyBookingPage page = new ManageMyBookingPage(driver);
+//        page.visitPage();
+//        return page;
+//    }
+
+    public void visitPage() {
+        this.driver.get(url);
+    }
+
+    public void fill_bookingRefNum(String str) {
+        bookingRefNum.sendKeys(str);
+    }
+
+    public void fill_leadPassengerSurname(String str) {
+        leadPassengerSurname.sendKeys(str);
+    }
+
+    public void submitLoginForm() {
+        loginFormSubmit_but.click();
+    }
+
+
 }
